@@ -1,0 +1,47 @@
+apply plugin: 'java'
+apply plugin: 'maven'
+apply plugin: 'signing'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+group = 'de.borntohula.dropwizard'
+archivesBaseName = 'dropwizard-auth-jwt'
+version = '0.2.0-SNAPSHOT'
+
+project.ext {
+    dropwizardVersion = '0.8.0'
+    jose4jVersion = '0.4.1'
+    jerseyVersion = '2.17'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile group: 'io.dropwizard', name: 'dropwizard-auth', version: project.dropwizardVersion
+    compile group: 'org.bitbucket.b_c', name: 'jose4j', version: project.jose4jVersion
+
+    testCompile group: 'io.dropwizard', name: 'dropwizard-testing', version: project.dropwizardVersion
+    testCompile group: 'org.glassfish.jersey.test-framework', name: 'jersey-test-framework-core', version: project.jerseyVersion
+    testCompile group: 'org.glassfish.jersey.test-framework.providers', name: 'jersey-test-framework-provider-grizzly2', version: project.jerseyVersion
+}
+
+task javadocJar(type: Jar) {
+    classifier = 'javadoc'
+    from javadoc
+}
+
+task sourcesJar(type: Jar) {
+    classifier = 'sources'
+    from sourceSets.main.allSource
+}
+
+artifacts {
+    archives jar, javadocJar, sourcesJar
+}
+
+signing {
+    sign configurations.archives
+}
