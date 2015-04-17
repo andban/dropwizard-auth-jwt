@@ -5,8 +5,17 @@ JSON Web Token based authentication for Dropwizard 0.8.x using the [jose4j](http
 
 ## Getting Started
 
-TODO: upload to maven repo
+Maven:
 
+    <dependency>
+        <groupId>de.borntohula.dropwizard</groupId>
+        <artifactId>dropwizard-auth-jwt</artifactId>
+        <version>0.1.0</version>
+    </dependency>
+
+Gradle:
+
+    compile 'de.borntohula.dropwizard:dropwizard-auth-jwt:0.1.0'
 
 ## Examples
 
