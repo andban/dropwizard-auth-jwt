@@ -7,12 +7,14 @@ targetCompatibility = 1.8
 
 group = 'de.borntohula.dropwizard'
 archivesBaseName = 'dropwizard-auth-jwt'
-version = '0.1.0'
+version = '0.1.0-SNAPSHOT'
 
 project.ext {
     dropwizardVersion = '0.8.0'
     jose4jVersion = '0.4.1'
     jerseyVersion = '2.17'
+
+    isReleaseVersion = !version.endsWith("SNAPSHOT")
 }
 
 repositories {
@@ -43,6 +45,7 @@ artifacts {
 }
 
 signing {
+    required { gradle.taskGraph.hasTask(':uploadArchives') && isReleaseVersion }
     sign configurations.archives
 }
 
