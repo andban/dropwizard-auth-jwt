@@ -10,12 +10,12 @@ Maven:
     <dependency>
         <groupId>de.borntohula.dropwizard</groupId>
         <artifactId>dropwizard-auth-jwt</artifactId>
-        <version>0.1.0</version>
+        <version>0.1.1</version>
     </dependency>
 
 Gradle:
 
-    compile 'de.borntohula.dropwizard:dropwizard-auth-jwt:0.1.0'
+    compile 'de.borntohula.dropwizard:dropwizard-auth-jwt:0.1.1'
 
 ## Examples
 
