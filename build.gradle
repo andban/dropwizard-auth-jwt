@@ -7,7 +7,7 @@ targetCompatibility = 1.7
 
 group = 'de.borntohula.dropwizard'
 archivesBaseName = 'dropwizard-auth-jwt'
-version = '0.1.1'
+version = '0.1.2-SNAPSHOT'
 
 project.ext {
     dropwizardVersion = '0.8.1'

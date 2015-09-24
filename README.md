@@ -1,4 +1,4 @@
-# dropwizard-auth-jwt
+# dropwizard-auth-jwt [![Build Status](https://travis-ci.org/andban/dropwizard-auth-jwt.svg?branch=v0.1.1)](https://travis-ci.org/andban/dropwizard-auth-jwt)
 
 JSON Web Token based authentication for Dropwizard 0.8.x using the [jose4j](https://bitbucket.org/b_c/jose4j) library.
 
